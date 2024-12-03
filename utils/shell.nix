@@ -1,13 +1,12 @@
 with import <nixpkgs> { };
-with pkgs.python38Packages;
-
+with pkgs.python310;
 stdenv.mkDerivation {
   name = "specter-desktop";
   buildInputs = [
-    python38Full
-    python38Packages.virtualenv
-    python38Packages.pip
-    python38Packages.pip-tools
+    python310Full
+    python310Packages.virtualenv
+    python310Packages.pip
+    python310Packages.pip-tools
     libusb1
   ];
   shellHook = ''
